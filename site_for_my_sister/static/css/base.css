@@ -1,0 +1,31 @@
+
+ul {
+    background-image: url('{% static 'img/oboi2.jpg' %}');
+
+
+}
+
+#bg{
+    background-repeat: no-repeat;
+    background-position: top;
+    background-size: 1900px 520 px;
+    background-attachment: fixed
+}
+
+.container{
+    width=100px
+    height=100px
+    margin-left: auto
+    color="white"
+    text-align: right
+}
+
+
+.text{
+    font size:24px
+    font color:#FF0000
+
+}
+
+
+}

@@ -1,0 +1,20 @@
+{% extends 'annaahair/base.html' %}
+{% block title %} Блог {% endblock %}
+{% block content %}
+<div class='container' style="color: #FF0000">
+    <h3>Блог</h3>
+    <hr>
+    <br>
+    {% for i in blog %}
+    <div
+            class='alert alert-danger mt-3'>
+        <h3>{{i.title}}</h3>
+        <p>{{i.review}}</p>
+    </div>
+    {% endfor %}
+
+
+</div>
+
+
+{% endblock %}

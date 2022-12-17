@@ -1,0 +1,27 @@
+{% extends 'annaahair/base.html' %}
+{% block title %} Ваши отзывы {% endblock %}
+
+
+{% block content %}
+
+
+<div class='container' style="color: #FF0000">
+    <h3>Отзывы</h3>
+    <hr>
+    <br>
+
+    {% for i in form %}
+    <div class='alert alert-danger mt-3'>
+        <h3>{{i.title1}}</h3>
+        <p>{{i.review1}}</p>
+    </div>
+
+    {% endfor %}
+
+</div>
+{% endblock %}
+
+
+
+
+

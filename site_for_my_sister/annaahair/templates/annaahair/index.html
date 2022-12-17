@@ -1,0 +1,68 @@
+{% extends 'annaahair/base.html' %}
+
+{% load static %}
+
+
+{% block title %} Главная {% endblock %}
+{% block content %}
+
+<link rel="stylesheet" href="{% static 'annaahair/css/index.css' %}">
+
+
+<div style="width:300px; height:500px; margin:auto; position:absolute; left:72%;">
+    <form class="barber_form" method="POST" name="zayavka" action="/zayavka.php">
+        <p class="caption" ><font color="#FF0000" >Записаться онлайн</font></p>
+
+        <div class="example_infofield"><font color="#FF0000">Тип работы:</font></div>
+        <select name="service_type">
+            <option>Стрижка</option>
+            <option>Укладка волос</option>
+            <option>Окрашивание волос</option>
+            <option>Кератиновое выпрямление волос</option>
+            <option>Ботокс волос</option>
+            <option>Холодное восстановление</option>
+            <option selected="selected">выберите тип работы</option>
+        </select>
+
+        <div class="example_infofield"><font color="#FF0000">Дата и время записи:</font></div>
+        <input type="datetime-local" name="date_time">
+
+        <fieldset>
+            <legend><font color="white">Контактная информация</font></legend>
+            <div class="example_infofield"><font color="#FF000">Ваше имя:</font></div>
+            <input type="text" name="name" placeholder="введите ваше имя">
+
+            <div class="example_infofield"><font color="#FF000">Ваш телефон:</font></div>
+            <input type="tel" name="phone" placeholder="например, +375 29 722-29-06">
+        </fieldset>
+
+        <input type="submit" name="zayavka_submit" value="Записаться">
+    </form>
+</div>
+
+<div class="container" style="color: #FF0000">
+    <h4><font color="#FF000">Оставьте свой отзыв:</font></h4>
+    <hr>
+
+    <form action="" method="post">
+        {% csrf_token %}
+        {{form.title1}}
+        <br>
+        <br>
+        {{form.review1}}
+        <br>
+
+
+        <button type='submit' class='btn-success'>Добавить</button>
+        <br>
+        <br>
+        <br>
+        <br>
+    </form>
+
+
+</div>
+<hr>
+
+
+{% endblock %}
